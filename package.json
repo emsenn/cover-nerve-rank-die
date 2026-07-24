@@ -1,0 +1,27 @@
+{
+  "name": "@emsenn/cover-nerve-rank-die",
+  "version": "1.0.0",
+  "description": "Placement-independent CoverNerve H0/H1, coordination, and Landauer readout with canonical typed RMN pinout.",
+  "type": "module",
+  "license": "MIT",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "src/"
+  ],
+  "exports": {
+    ".": "./src/index.mjs",
+    "./function": "./src/cover-nerve.mjs"
+  },
+  "scripts": {
+    "check": "node --check src/*.mjs",
+    "test": "node --test test/*.test.mjs",
+    "verify": "npm run check && npm test && npm pack --dry-run"
+  },
+  "dependencies": {
+    "@emsenn/rmn-semantic-conformance-die": "https://github.com/emsenn/rmn-semantic-conformance-die/releases/download/v6.0.0/emsenn-rmn-semantic-conformance-die-6.0.0.tgz"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
