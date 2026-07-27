@@ -2,12 +2,12 @@
 import {
   decodeRelationalValue,
   encodeRelationalValue,
-} from "@emsenn/rmn-semantic-conformance-die/relational-value";
+} from "@lenticule-science/rmn-semantic-conformance-die/relational-value";
 import {
   decodeSemantic,
   semanticBytes,
   semanticId,
-} from "@emsenn/rmn-semantic-conformance-die";
+} from "@lenticule-science/rmn-semantic-conformance-die";
 import { computeCoverNerve } from "./cover-nerve.mjs";
 
 export const COVER_NERVE_DIE = Object.freeze({
