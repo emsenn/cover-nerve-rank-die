@@ -1,5 +1,5 @@
 {
-  "name": "@lenticule-science/cover-nerve-rank-die",
+  "name": "@lenticule-science/cover-nerve-rank-readout-service",
   "version": "1.0.0",
   "description": "Placement-independent CoverNerve H0/H1, coordination, and Landauer readout with canonical typed RMN pinout.",
   "type": "module",
@@ -28,9 +28,9 @@
     "profile": "org.harmonious-union.semiotic-voxel.v1",
     "owner": "lenticule-science",
     "kind": "inert-material",
-    "actor": "urn:ame:cover-nerve-rank-die",
+    "actor": "urn:ame:cover-nerve-rank-readout-service",
     "operations": [],
     "capabilities": [],
-    "package": "@lenticule-science/cover-nerve-rank-die"
+    "package": "@lenticule-science/cover-nerve-rank-readout-service"
   }
 }
