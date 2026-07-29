@@ -1,7 +1,7 @@
 {
   "name": "@lenticule-science/cover-nerve-rank-readout-service",
   "version": "1.0.0",
-  "description": "Placement-independent CoverNerve H0/H1, coordination, and Landauer readout with canonical typed RMN pinout.",
+  "description": "Placement-independent CoverNerve H0/H1 logic die with a canonical typed RMN pinout.",
   "type": "module",
   "license": "MIT",
   "files": [
@@ -11,7 +11,8 @@
   ],
   "exports": {
     ".": "./src/index.mjs",
-    "./function": "./src/cover-nerve.mjs"
+    "./function": "./src/cover-nerve.mjs",
+    "./attestation": "./src/source-attestation.mjs"
   },
   "scripts": {
     "check": "node --check src/*.mjs",
@@ -27,10 +28,19 @@
   "x-semiotic-voxel": {
     "profile": "org.harmonious-union.semiotic-voxel.v1",
     "owner": "lenticule-science",
-    "kind": "inert-material",
+    "kind": "logic-die",
     "actor": "urn:ame:cover-nerve-rank-readout-service",
-    "operations": [],
-    "capabilities": [],
+    "operations": [
+      "obsmetrologia.coverNerve.rank"
+    ],
+    "capabilities": [
+      {
+        "capability": "cover-nerve-rank",
+        "faces": [
+          "obsmetrologia.coverNerve.rank"
+        ]
+      }
+    ],
     "package": "@lenticule-science/cover-nerve-rank-readout-service"
   }
 }

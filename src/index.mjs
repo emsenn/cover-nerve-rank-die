@@ -9,6 +9,7 @@ import {
   semanticId,
 } from "@lenticule-science/rmn-semantic-conformance-die";
 import { computeCoverNerve } from "./cover-nerve.mjs";
+export { attestCoverNerveSources } from "./source-attestation.mjs";
 
 export const COVER_NERVE_DIE = Object.freeze({
   kind: "LogicDie",
