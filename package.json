@@ -28,7 +28,7 @@
   "x-semiotic-voxel": {
     "profile": "org.harmonious-union.semiotic-voxel.v1",
     "owner": "lenticule-science",
-    "kind": "logic-die",
+    "kind": "capability-cell",
     "actor": "urn:ame:cover-nerve-rank-readout-service",
     "operations": [
       "obsmetrologia.coverNerve.rank"
