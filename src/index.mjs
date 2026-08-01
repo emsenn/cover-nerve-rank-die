@@ -2,12 +2,12 @@
 import {
   decodeRelationalValue,
   encodeRelationalValue,
-} from "@lenticule-science/rmn-semantic-conformance-die/relational-value";
+} from "@red-cup-engineering/rmn-semantic-conformance-die/relational-value";
 import {
   decodeSemantic,
   semanticBytes,
   semanticId,
-} from "@lenticule-science/rmn-semantic-conformance-die";
+} from "@red-cup-engineering/rmn-semantic-conformance-die";
 import { computeCoverNerve } from "./cover-nerve.mjs";
 export { attestCoverNerveSources } from "./source-attestation.mjs";
 
