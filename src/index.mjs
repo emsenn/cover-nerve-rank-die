@@ -6,9 +6,9 @@ import {
 import {
   decodeSemantic,
   semanticBytes,
-  semanticId,
 } from "@red-cup-engineering/relation-model-notation-runtime";
 import { computeCoverNerve } from "./cover-nerve.mjs";
+import { jsonId } from "./semantic-identity.mjs";
 export { attestCoverNerveSources } from "./source-attestation.mjs";
 
 export const COVER_NERVE_DIE = Object.freeze({
@@ -25,12 +25,12 @@ export const COVER_NERVE_DIE = Object.freeze({
   ],
 });
 
-function ascribedValue(value) {
+function ascribedValue(value, objectKind) {
   const encoded = encodeRelationalValue(value);
   const term = ["ascribe", encoded.type, encoded.term];
   return {
     bytes: semanticBytes(term),
-    id: semanticId(term),
+    id: jsonId(term, objectKind),
     term,
   };
 }
@@ -57,7 +57,7 @@ export function encodeCoverNerveRequest({ entities, cells, components }) {
     entities,
     cells,
     components,
-  });
+  }, "lenticule.cover-nerve-rank.request");
 }
 
 export function decodeCoverNerveRequest(bytes) {
@@ -82,7 +82,7 @@ export function encodeCoverNerveResult(readout) {
     coordinationFree: readout.coordinationFree,
     landauerBits: readout.landauerBits,
     coordinationCost: readout.coordinationCost,
-  });
+  }, "lenticule.cover-nerve-rank.result");
 }
 
 export function decodeCoverNerveResult(bytes) {
@@ -106,7 +106,7 @@ export function executeCoverNerveDie(inputBytes) {
     throw error;
   }
   return {
-    inputId: semanticId(input.term),
+    inputId: jsonId(input.term, "lenticule.cover-nerve-rank.request"),
     ...encodeCoverNerveResult(readout),
   };
 }

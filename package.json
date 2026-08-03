@@ -1,6 +1,6 @@
 {
   "name": "@lenticule-science/cover-nerve-rank-readout-service",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Placement-independent CoverNerve H0/H1 logic die with a canonical typed RMN pinout.",
   "type": "module",
   "license": "MIT",
@@ -20,6 +20,7 @@
     "verify": "npm run check && npm test && npm pack --dry-run"
   },
   "dependencies": {
+    "@red-cup-engineering/semantic-content-identify-service": "0.2.2",
     "@red-cup-engineering/relation-model-notation-runtime": "7.0.0"
   },
   "engines": {
